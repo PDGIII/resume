@@ -21,19 +21,14 @@ concurrency:
 jobs:
   render-and-deploy:
     runs-on: homelab-k8s-resume
+    container:
+      image: ghcr.io/rendercv/rendercv:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Render CV
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/workdir \
-            -w /workdir \
-            -e HOME=/workdir \
-            --user $(id -u):$(id -g) \
-            ghcr.io/rendercv/rendercv:latest \
-            render Philip_Greco_CV.yaml
+        run: rendercv render Philip_Greco_CV.yaml
 
       - name: Prepare output directory
         run: |
