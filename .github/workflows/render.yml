@@ -21,12 +21,17 @@ concurrency:
 jobs:
   render-and-deploy:
     runs-on: homelab-k8s-resume
-    container:
-      image: ghcr.io/rendercv/rendercv:latest
-      options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install rendercv
+        run: pip install rendercv
 
       - name: Render CV
         run: rendercv render Philip_Greco_CV.yaml
