@@ -21,14 +21,11 @@ concurrency:
 jobs:
   render-and-deploy:
     runs-on: homelab-k8s-resume
+    container:
+      image: python:3.12
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
 
       - name: Install rendercv
         run: pip install rendercv
