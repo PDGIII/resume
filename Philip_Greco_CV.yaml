@@ -123,7 +123,6 @@ design:
     left_margin: 0.7in
     right_margin: 0.7in
     show_footer: true
-    show_page_numbering: true
   colors:
     body: rgb(0, 0, 0)
     name: rgb(128, 0, 200)
@@ -138,4 +137,4 @@ design:
     date_and_location_column_alignment: right
 
 locale:
-  date_style: "MONTH_ABBREVIATION YEAR"
+  language: english
