@@ -37,8 +37,8 @@ jobs:
         run: |
           find rendercv_output -type f
           mkdir -p gh-pages
-          find rendercv_output -name "*.html" -exec cp {} gh-pages/index.html \;
-          find rendercv_output -name "*.pdf" -exec cp {} gh-pages/ \; || true
+          find rendercv_output -name "*.pdf" -exec cp {} gh-pages/resume.pdf \;
+          echo '<meta http-equiv="refresh" content="0; url=resume.pdf">' > gh-pages/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
