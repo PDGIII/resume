@@ -23,6 +23,7 @@ jobs:
     runs-on: homelab-k8s-resume
     container:
       image: ghcr.io/rendercv/rendercv:latest
+      options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v4
