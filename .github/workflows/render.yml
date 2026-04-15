@@ -25,11 +25,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install rendercv
-        run: pip3 install rendercv
-
       - name: Render CV
-        run: rendercv render Philip_Greco_CV.yaml
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/workdir \
+            -w /workdir \
+            ghcr.io/rendercv/rendercv:latest \
+            render Philip_Greco_CV.yaml
 
       - name: Prepare output directory
         run: |
