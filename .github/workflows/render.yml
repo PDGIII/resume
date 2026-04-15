@@ -38,11 +38,10 @@ jobs:
 
       - name: Prepare output directory
         run: |
+          find rendercv_output -type f
           mkdir -p gh-pages
-          # Copy all rendered outputs
-          cp rendercv_output/* gh-pages/
-          # Rename HTML to index.html for GitHub Pages root
-          mv gh-pages/Philip_Greco_CV.html gh-pages/index.html
+          find rendercv_output -name "*.html" -exec cp {} gh-pages/index.html \;
+          find rendercv_output -name "*.pdf" -exec cp {} gh-pages/ \; || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
