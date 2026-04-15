@@ -1,0 +1,51 @@
+name: Render Resume and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Philip_Greco_CV.yaml"
+      - ".github/workflows/render.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  render-and-deploy:
+    runs-on: homelab-k8s-resume
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install rendercv
+        run: pip3 install rendercv
+
+      - name: Render CV
+        run: rendercv render Philip_Greco_CV.yaml
+
+      - name: Prepare output directory
+        run: |
+          mkdir -p gh-pages
+          # Copy all rendered outputs
+          cp rendercv_output/* gh-pages/
+          # Rename HTML to index.html for GitHub Pages root
+          mv gh-pages/Philip_Greco_CV.html gh-pages/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./gh-pages
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "deploy: render ${{ github.sha }}"

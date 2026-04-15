@@ -1,0 +1,141 @@
+cv:
+  name: Philip Greco, III
+  location: Tampa, FL
+  email: philip.d.greco@gmail.com
+  phone: "+16035602009"
+  website: https://philipgreco.com
+  social_networks:
+    - network: LinkedIn
+      username: philip-greco
+    - network: GitHub
+      username: PDGIII
+
+  sections:
+    summary:
+      - Dedicated and service-driven operations professional with 7+ years' experience
+        in the administration, support, and troubleshooting of large-scale networks
+        with a focus in Voice over IP and Linux administration.
+      - Consistently promote strong relationships with coworkers, clients, vendors,
+        and partner organizations based on earned trust and respect.
+      - Proven capacity to deliver complex projects on-time and within budget despite
+        shifting priorities, demanding expectations, and stringent deadlines.
+      - Working towards AWS Certified Solutions Architect Associate.
+
+    experience:
+      - company: Sangoma
+        position: DevOps Engineer
+        location: Atlanta, GA
+        start_date: 2021-01
+        end_date: present
+        highlights:
+          - Actively monitor and maintain a large-scale cloud UCaaS platform spanning
+            multiple datacenters and cloud infrastructures.
+          - Automated build and deployments of core infrastructure via Ansible.
+          - Perform debugging and analysis of complex issues reported by customers
+            and the Tier 3 Support group.
+          - Implemented open-source solutions and developed Bash/SQL scripts allowing
+            technicians to easily gather information and troubleshoot issues.
+
+      - company: GK Labs Inc
+        position: Co-Founder / DevOps Engineer
+        location: Atlanta, GA
+        start_date: 2020-01
+        end_date: present
+        highlights:
+          - Created a startup and successfully launched a Fantasy Football-based mobile
+            application on both iOS and Android with over 700 users.
+          - Manage operations, vendors, Linux-based infrastructure, and oversee
+            Development team.
+          - Maintain a NGINX load balancer and web back-end hosted on AWS infrastructure.
+
+      - company: Star2Star Communications
+        position: Lead Tier 3 Technician
+        location: Atlanta, GA
+        start_date: 2016-01
+        end_date: 2021-01
+        highlights:
+          - Responsible for advanced troubleshooting of Voice Over IP systems and
+            working with the Operations and Development teams to resolve production
+            failures.
+          - Worked closely with vendors to provide logs and packet captures to identify
+            global production issues.
+          - Created and contributed technical documentation to enhance Standard
+            Operating Procedures within the Technical Support group.
+          - Trained junior technicians on best practices and how to use related tools
+            on a weekly and monthly basis.
+
+      - company: Star2Star Communications
+        position: Tier 2 Technician
+        location: Sarasota, FL
+        start_date: 2015-01
+        end_date: 2016-01
+        highlights:
+          - Installed, configured, maintained, and proactively monitored customers'
+            Voice Over IP systems consisting of networking equipment and Linux server
+            environments.
+          - Prioritized and resolved trouble tickets to meet SLA times.
+          - Managed multiple issues simultaneously in a high-pressure environment.
+          - Worked as the point of contact for many high-profile customers.
+
+      - company: Deerfield Community School
+        position: IT Intern
+        location: Deerfield, NH
+        start_date: 2012-01
+        end_date: 2013-01
+        highlights:
+          - Provided IT support for school staff and infrastructure.
+
+    education:
+      - institution: Southern New Hampshire University
+        area: Information Technology
+        degree: BS
+        location: Manchester, NH
+        start_date: 2013-01
+        end_date: 2017-01
+        highlights:
+          - "Concentration: Networking & Telecommunications"
+
+      - institution: Concord's Community College
+        area: Information Technology
+        degree: AS
+        location: Concord, NH
+        start_date: 2011-01
+        end_date: 2013-01
+
+    skills:
+      - label: Networking
+        details: VoIP, LAN, TCP/IP, DHCP, DNS
+      - label: Cloud
+        details: AWS, Digital Ocean
+      - label: Operating Systems
+        details: Linux (Ubuntu, Debian, OpenWrt), Cisco routers/switches
+      - label: Tools
+        details: >-
+          Wireshark, Tcpdump, Bash, Ansible, Wireguard, S3, NGINX, MySQL,
+          Nagios, Docker, Freeswitch, Asterisk, Promtail, Grafana, Homer, GIT
+
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 0.7in
+    bottom_margin: 0.7in
+    left_margin: 0.7in
+    right_margin: 0.7in
+    show_footer: true
+    show_page_numbering: true
+  colors:
+    body: rgb(0, 0, 0)
+    name: rgb(128, 0, 200)
+    headline: rgb(128, 0, 200)
+    connections: rgb(128, 0, 200)
+    section_titles: rgb(128, 0, 200)
+    links: rgb(128, 0, 200)
+    footer: rgb(128, 128, 128)
+  typography:
+    line_spacing: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+
+locale:
+  date_style: "MONTH_ABBREVIATION YEAR"
