@@ -30,6 +30,8 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/workdir \
             -w /workdir \
+            -e HOME=/workdir \
+            --user $(id -u):$(id -g) \
             ghcr.io/rendercv/rendercv:latest \
             render Philip_Greco_CV.yaml
 
