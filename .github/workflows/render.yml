@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install rendercv
-        run: pip install rendercv
+        run: pip install "rendercv[full]"
 
       - name: Render CV
         run: rendercv render Philip_Greco_CV.yaml
