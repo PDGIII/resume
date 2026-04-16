@@ -12,41 +12,61 @@ cv:
 
   sections:
     summary:
-      - Dedicated and service-driven operations professional with 7+ years' experience
-        in the administration, support, and troubleshooting of large-scale networks
-        with a focus in Voice over IP and Linux administration.
-      - Consistently promote strong relationships with coworkers, clients, vendors,
-        and partner organizations based on earned trust and respect.
-      - Proven capacity to deliver complex projects on-time and within budget despite
-        shifting priorities, demanding expectations, and stringent deadlines.
-      - Working towards AWS Certified Solutions Architect Associate.
+      - DevOps Engineer with experience designing, automating, and operating
+        large-scale cloud and on-premises infrastructure across bare-metal Kubernetes
+        and AWS EKS. Focused on container orchestration, infrastructure-as-code,
+        CI/CD, secrets management, and observability.
+      - Hands-on practitioner who applies production-grade patterns in personal projects,
+        including a self-hosted Kubernetes homelab running the same tooling used at work.
+      - Proven ability to deliver complex projects on time while building strong
+        relationships across engineering, operations, and vendor teams.
 
     experience:
+      - company: Sangoma
+        position: Sr. DevOps Engineer
+        location: Tampa, FL
+        start_date: 2025-07
+        end_date: present
+        highlights:
+          - Operate and maintain a large-scale UCaaS platform across bare-metal Kubernetes
+            clusters and AWS EKS, supporting VoIP services including Asterisk, SIP,
+            RTP proxy, and presence at scale.
+          - Migrated all manually-managed Kubernetes workloads to Helm and Helmfile,
+            authoring custom charts and implementing a context guard to prevent
+            accidental cross-cluster deployments.
+          - Led Kubernetes CNI migration to Calico via the Tigera Operator and managed
+            Multus and Whereabouts for advanced multi-network pod configurations.
+          - Deployed and managed Istio service mesh across clusters, configuring
+            PodDisruptionBudgets, traffic policies, and autoscaling.
+          - Provisioned and managed AWS EKS clusters using Terraform and Terragrunt,
+            including EFS storage class migration, AWS Load Balancer Controller, pod
+            identity for IAM, and VPC security group management.
+          - Deployed HashiCorp Vault cluster on AWS and integrated with External Secrets
+            Operator across all environments, eliminating hardcoded secrets from Git.
+          - Built full observability stack on EKS using Prometheus, Grafana, Loki, and
+            Alloy with both daemonset and sidecar logging patterns for platform services.
+          - Managed Kubernetes version upgrades across multiple clusters via Ansible
+            playbooks incorporating pod health checks, DNS validation, and controlled
+            rolling upgrades through v1.33.
+
       - company: Sangoma
         position: DevOps Engineer
         location: Atlanta, GA
         start_date: 2021-01
-        end_date: present
+        end_date: 2025-07
         highlights:
-          - Actively monitor and maintain a large-scale cloud UCaaS platform spanning
-            multiple datacenters and cloud infrastructures.
-          - Automated build and deployments of core infrastructure via Ansible.
-          - Perform debugging and analysis of complex issues reported by customers
-            and the Tier 3 Support group.
-          - Implemented open-source solutions and developed Bash/SQL scripts allowing
-            technicians to easily gather information and troubleshoot issues.
-
-      - company: GK Labs Inc
-        position: Co-Founder / DevOps Engineer
-        location: Atlanta, GA
-        start_date: 2020-01
-        end_date: present
-        highlights:
-          - Created a startup and successfully launched a Fantasy Football-based mobile
-            application on both iOS and Android with over 700 users.
-          - Manage operations, vendors, Linux-based infrastructure, and oversee
-            Development team.
-          - Maintain a NGINX load balancer and web back-end hosted on AWS infrastructure.
+          - Provisioned and managed bare-metal Dell blade infrastructure using PXE boot
+            with Debian preseed automation, handling network interface configuration
+            and OS deployment at scale.
+          - Authored and maintained Ansible roles to compile and deploy FreeSWITCH from
+            source, managing version pinning, Sofia-SIP patches, debug symbol builds,
+            and dependency management across environments.
+          - Managed SIP and global load balancer fleets via Ansible, maintaining version
+            consistency and availability across production infrastructure.
+          - Monitored and maintained the UCaaS platform, performing root cause analysis
+            on complex issues escalated by Tier 3 Support.
+          - Developed internal Bash and SQL tooling to streamline diagnostics and reduce
+            mean time to resolution for support engineers.
 
       - company: Star2Star Communications
         position: Lead Tier 3 Technician
@@ -54,36 +74,45 @@ cv:
         start_date: 2016-01
         end_date: 2021-01
         highlights:
-          - Responsible for advanced troubleshooting of Voice Over IP systems and
-            working with the Operations and Development teams to resolve production
-            failures.
-          - Worked closely with vendors to provide logs and packet captures to identify
-            global production issues.
-          - Created and contributed technical documentation to enhance Standard
-            Operating Procedures within the Technical Support group.
-          - Trained junior technicians on best practices and how to use related tools
-            on a weekly and monthly basis.
+          - Diagnosed and resolved complex SIP/VoIP issues using Wireshark packet
+            analysis, filing detailed bug reports with captures and reproduction steps
+            to the development team.
+          - Collaborated with vendors to correlate logs and packet captures against
+            global SIP infrastructure, identifying and resolving platform-wide issues.
+          - Authored technical documentation and contributed to Standard Operating
+            Procedures to improve consistency across the support organization.
+          - Mentored junior technicians on SIP troubleshooting methodology and
+            diagnostic tooling through regular training sessions.
 
-      - company: Star2Star Communications
-        position: Tier 2 Technician
-        location: Sarasota, FL
-        start_date: 2015-01
-        end_date: 2016-01
+    projects:
+      - name: Self-Hosted Kubernetes Homelab
         highlights:
-          - Installed, configured, maintained, and proactively monitored customers'
-            Voice Over IP systems consisting of networking equipment and Linux server
-            environments.
-          - Prioritized and resolved trouble tickets to meet SLA times.
-          - Managed multiple issues simultaneously in a high-pressure environment.
-          - Worked as the point of contact for many high-profile customers.
+          - Designed and operate a bare-metal Kubernetes cluster managed entirely
+            through Helmfile with declarative, dependency-ordered releases.
+          - Integrated HashiCorp Vault with External Secrets Operator using Kubernetes
+            auth, providing dynamic secret injection across all namespaces without
+            storing credentials in Git.
+          - Deployed Tailscale operator with custom ingress resources for zero-config
+            HTTPS access to internal services without exposing ports to the internet.
+          - Built a full observability stack with Prometheus, Grafana, Loki, and Alloy
+            for metrics, log aggregation, and alerting via Alertmanager.
+          - Provisioned Longhorn distributed block storage for stateful workloads and
+            MetalLB for bare-metal load balancer support.
+          - Automated CI/CD for multiple services using GitHub Actions with self-hosted
+            ARC runner scale sets deployed on the cluster, publishing container images
+            to GHCR and deploying via Helm.
 
-      - company: Deerfield Community School
-        position: IT Intern
-        location: Deerfield, NH
-        start_date: 2012-01
-        end_date: 2013-01
+      - name: Self-Hosted LLM Inference & AI Automation
         highlights:
-          - Provided IT support for school staff and infrastructure.
+          - Self-hosted Ollama on Kubernetes for fully local LLM inference, keeping
+            all data on-premises with no dependency on external AI APIs.
+          - Built a RAG-style pipeline using ChromaDB as a vector database with
+            Ollama-generated embeddings, enabling semantic similarity search across
+            historical articles for context injection into prompts.
+          - Deployed as a Kubernetes CronJob with randomized scheduling jitter,
+            concurrency controls, and ExternalSecrets Operator pulling credentials
+            from HashiCorp Vault.
+
 
     education:
       - institution: Southern New Hampshire University
@@ -95,7 +124,7 @@ cv:
         highlights:
           - "Concentration: Networking & Telecommunications"
 
-      - institution: Concord's Community College
+      - institution: NHTI, Concord's Community College
         area: Information Technology
         degree: AS
         location: Concord, NH
@@ -103,16 +132,26 @@ cv:
         end_date: 2013-01
 
     skills:
-      - label: Networking
-        details: VoIP, LAN, TCP/IP, DHCP, DNS
-      - label: Cloud
-        details: AWS, Digital Ocean
-      - label: Operating Systems
-        details: Linux (Ubuntu, Debian, OpenWrt), Cisco routers/switches
-      - label: Tools
-        details: >-
-          Wireshark, Tcpdump, Bash, Ansible, Wireguard, S3, NGINX, MySQL,
-          Nagios, Docker, Freeswitch, Asterisk, Promtail, Grafana, Homer, GIT
+      - label: Container & Orchestration
+        details: Kubernetes, Docker, EKS, Helm, Helmfile
+      - label: Infrastructure as Code
+        details: Terraform, Terragrunt, Ansible
+      - label: CI/CD
+        details: GitHub Actions, Actions Runner Controller (ARC), GHCR
+      - label: Secrets & Security
+        details: HashiCorp Vault, External Secrets Operator, Kubernetes RBAC, Tailscale
+      - label: Networking & Ingress
+        details: Traefik, MetalLB, NGINX, Wireguard, VoIP, TCP/IP, DNS
+      - label: Observability
+        details: Prometheus, Grafana, Loki, Alloy, Alertmanager
+      - label: Storage
+        details: Longhorn, AWS EFS, S3
+      - label: Cloud & OS
+        details: AWS, Digital Ocean, Linux (Ubuntu, Debian)
+      - label: AI & LLM
+        details: Ollama, ChromaDB, RAG
+      - label: Languages
+        details: Bash, Python
 
 design:
   theme: classic
@@ -125,11 +164,11 @@ design:
     show_footer: true
   colors:
     body: rgb(0, 0, 0)
-    name: rgb(128, 0, 200)
-    headline: rgb(128, 0, 200)
-    connections: rgb(128, 0, 200)
-    section_titles: rgb(128, 0, 200)
-    links: rgb(128, 0, 200)
+    name: rgb(75, 0, 130)
+    headline: rgb(75, 0, 130)
+    connections: rgb(75, 0, 130)
+    section_titles: rgb(75, 0, 130)
+    links: rgb(75, 0, 130)
     footer: rgb(128, 128, 128)
   typography:
     line_spacing: 0.6em
