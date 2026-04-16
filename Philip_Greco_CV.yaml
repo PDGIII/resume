@@ -19,7 +19,7 @@ cv:
       - Hands-on practitioner who applies production-grade patterns in personal projects,
         including a self-hosted Kubernetes homelab running the same tooling used at work.
       - Proven ability to deliver complex projects on time while building strong
-        relationships across engineering, operations, and vendor teams.
+        relationships across development, operations, and support teams.
 
     experience:
       - company: Sangoma
@@ -77,8 +77,9 @@ cv:
           - Diagnosed and resolved complex SIP/VoIP issues using Wireshark packet
             analysis, filing detailed bug reports with captures and reproduction steps
             to the development team.
-          - Collaborated with vendors to correlate logs and packet captures against
-            global SIP infrastructure, identifying and resolving platform-wide issues.
+          - Collaborated with customers to correlate logs and packet captures,
+            identifying platform-wide SIP issues and filing bug reports with
+            development and DevOps teams for resolution.
           - Authored technical documentation and contributed to Standard Operating
             Procedures to improve consistency across the support organization.
           - Mentored junior technicians on SIP troubleshooting methodology and
