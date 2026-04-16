@@ -111,7 +111,7 @@ cv:
             historical articles for context injection into prompts.
           - Deployed as a Kubernetes CronJob with randomized scheduling jitter,
             concurrency controls, and ExternalSecrets Operator pulling credentials
-            from HashiCorp Vault. TEST
+            from HashiCorp Vault.
 
 
     education:
