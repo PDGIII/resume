@@ -11,14 +11,12 @@ cv:
 
   sections:
     summary:
-      - DevOps Engineer with experience designing, automating, and operating
-        large-scale cloud and on-premises infrastructure across bare-metal Kubernetes
-        and AWS EKS. Focused on container orchestration, infrastructure-as-code,
-        CI/CD, secrets management, and observability.
-      - Hands-on practitioner who applies production-grade patterns in personal projects,
-        including a self-hosted Kubernetes homelab running the same tooling used at work.
-      - Proven ability to deliver complex projects on time while building strong
-        relationships across development, operations, and support teams.
+      - DevOps Engineer who designs, automates, and operates large-scale
+        infrastructure across bare-metal Kubernetes and AWS EKS. Focused on
+        container orchestration, infrastructure-as-code, CI/CD, secrets
+        management, and observability.
+      - Applies the same production-grade tooling in a self-hosted Kubernetes
+        homelab used at work.
 
     experience:
       - company: Sangoma
@@ -27,26 +25,23 @@ cv:
         start_date: 2025-07
         end_date: present
         highlights:
-          - Operate and maintain a large-scale UCaaS platform across bare-metal Kubernetes
-            clusters and AWS EKS, supporting VoIP services including Asterisk, SIP,
-            RTP proxy, and presence at scale.
-          - Migrated all manually-managed Kubernetes workloads to Helm and Helmfile,
-            authoring custom charts and implementing a context guard to prevent
-            accidental cross-cluster deployments.
-          - Led Kubernetes CNI migration to Calico via the Tigera Operator and managed
-            Multus and Whereabouts for advanced multi-network pod configurations.
-          - Deployed and managed Istio service mesh across clusters, configuring
-            PodDisruptionBudgets, traffic policies, and autoscaling.
-          - Provisioned and managed AWS EKS clusters using Terraform and Terragrunt,
-            including EFS storage class migration, AWS Load Balancer Controller, pod
-            identity for IAM, and VPC security group management.
-          - Deployed HashiCorp Vault cluster on AWS and integrated with External Secrets
-            Operator across all environments, eliminating hardcoded secrets from Git.
-          - Built full observability stack on EKS using Prometheus, Grafana, Loki, and
-            Alloy with both daemonset and sidecar logging patterns for platform services.
-          - Managed Kubernetes version upgrades across multiple clusters via Ansible
-            playbooks incorporating pod health checks, DNS validation, and controlled
-            rolling upgrades through v1.33.
+          - Operated a UCaaS platform across bare-metal Kubernetes and AWS EKS,
+            supporting VoIP services including Asterisk, SIP, RTP proxy, and presence.
+          - Migrated all manually-managed workloads to Helm and Helmfile, authoring
+            custom charts and a context guard to prevent accidental cross-cluster deployments.
+          - Led CNI migration to Calico via the Tigera Operator; managed Multus and
+            Whereabouts for multi-network pods.
+          - Deployed Istio service mesh across clusters, configuring PodDisruptionBudgets,
+            traffic policies, and autoscaling.
+          - Provisioned AWS EKS clusters with Terraform and Terragrunt, including EFS
+            storage migration, AWS Load Balancer Controller, pod identity for IAM, and
+            VPC security groups.
+          - Deployed HashiCorp Vault on AWS and integrated External Secrets Operator
+            across all environments, eliminating hardcoded secrets from Git.
+          - Built an observability stack on EKS with Prometheus, Grafana, Loki, and Alloy,
+            using daemonset and sidecar logging patterns.
+          - Automated Kubernetes upgrades across clusters through v1.33 via Ansible
+            playbooks with pod health checks, DNS validation, and controlled rolling upgrades.
 
       - company: Sangoma
         position: DevOps Engineer
@@ -54,18 +49,16 @@ cv:
         start_date: 2021-01
         end_date: 2025-07
         highlights:
-          - Provisioned and managed bare-metal Dell blade infrastructure using PXE boot
-            with Debian preseed automation, handling network interface configuration
-            and OS deployment at scale.
-          - Authored and maintained Ansible roles to compile and deploy FreeSWITCH from
-            source, managing version pinning, Sofia-SIP patches, debug symbol builds,
-            and dependency management across environments.
+          - Provisioned bare-metal Dell blade infrastructure via PXE boot with Debian
+            preseed automation, handling network configuration and OS deployment.
+          - Authored Ansible roles to compile and deploy FreeSWITCH from source, managing
+            version pinning, Sofia-SIP patches, and debug symbol builds.
           - Managed SIP and global load balancer fleets via Ansible, maintaining version
-            consistency and availability across production infrastructure.
-          - Monitored and maintained the UCaaS platform, performing root cause analysis
-            on complex issues escalated by Tier 3 Support.
-          - Developed internal Bash and SQL tooling to streamline diagnostics and reduce
-            mean time to resolution for support engineers.
+            consistency and availability in production.
+          - Maintained the UCaaS platform, performing root cause analysis on issues
+            escalated by Tier 3 Support.
+          - Built internal Bash and SQL tooling to streamline diagnostics and reduce
+            mean time to resolution.
 
       - company: Star2Star Communications
         position: Lead Tier 3 Technician
@@ -74,44 +67,37 @@ cv:
         end_date: 2021-01
         highlights:
           - Diagnosed and resolved complex SIP/VoIP issues using Wireshark packet
-            analysis, filing detailed bug reports with captures and reproduction steps
-            to the development team.
-          - Collaborated with customers to correlate logs and packet captures,
-            identifying platform-wide SIP issues and filing bug reports with
-            development and DevOps teams for resolution.
-          - Authored technical documentation and contributed to Standard Operating
-            Procedures to improve consistency across the support organization.
-          - Mentored junior technicians on SIP troubleshooting methodology and
-            diagnostic tooling through regular training sessions.
+            analysis, filing detailed bug reports with captures and reproduction steps.
+          - Correlated customer logs and packet captures to identify platform-wide SIP
+            issues, escalating to development and DevOps teams.
+          - Authored technical documentation and Standard Operating Procedures to improve
+            consistency across the support organization.
+          - Mentored junior technicians on SIP troubleshooting and diagnostic tooling.
 
     projects:
       - name: Self-Hosted Kubernetes Homelab
         highlights:
-          - Designed and operate a bare-metal Kubernetes cluster managed entirely
-            through Helmfile with declarative, dependency-ordered releases.
-          - Integrated HashiCorp Vault with External Secrets Operator using Kubernetes
-            auth, providing dynamic secret injection across all namespaces without
-            storing credentials in Git.
-          - Deployed Tailscale operator with custom ingress resources for zero-config
-            HTTPS access to internal services without exposing ports to the internet.
-          - Built a full observability stack with Prometheus, Grafana, Loki, and Alloy
-            for metrics, log aggregation, and alerting via Alertmanager.
+          - Designed and operated a bare-metal Kubernetes cluster managed entirely through
+            Helmfile with declarative, dependency-ordered releases.
+          - Integrated HashiCorp Vault with External Secrets Operator via Kubernetes auth
+            for dynamic secret injection without storing credentials in Git.
+          - Deployed the Tailscale operator with custom ingress for zero-config HTTPS
+            access to internal services without exposing public ports.
+          - Built an observability stack with Prometheus, Grafana, Loki, Alloy, and
+            Alertmanager for metrics, logs, and alerting.
           - Provisioned Longhorn distributed block storage for stateful workloads and
-            MetalLB for bare-metal load balancer support.
-          - Automated CI/CD for multiple services using GitHub Actions with self-hosted
-            ARC runner scale sets deployed on the cluster, publishing container images
-            to GHCR and deploying via Helm.
+            MetalLB for bare-metal load balancing.
+          - Automated CI/CD with GitHub Actions and self-hosted ARC runner scale sets,
+            publishing images to GHCR and deploying via Helm.
 
       - name: Self-Hosted LLM Inference & AI Automation
         highlights:
-          - Self-hosted Ollama on Kubernetes for fully local LLM inference, keeping
-            all data on-premises with no dependency on external AI APIs.
-          - Built a RAG-style pipeline using ChromaDB as a vector database with
-            Ollama-generated embeddings, enabling semantic similarity search across
-            historical articles for context injection into prompts.
-          - Deployed as a Kubernetes CronJob with randomized scheduling jitter,
-            concurrency controls, and ExternalSecrets Operator pulling credentials
-            from HashiCorp Vault.
+          - Self-hosted Ollama on Kubernetes for fully local LLM inference, keeping all
+            data on-premises with no external AI APIs.
+          - Built a RAG pipeline using ChromaDB and Ollama-generated embeddings for
+            semantic search over historical articles, injecting context into prompts.
+          - Deployed as a Kubernetes CronJob with scheduling jitter, concurrency controls,
+            and credentials pulled from Vault via External Secrets Operator.
 
 
     education:
