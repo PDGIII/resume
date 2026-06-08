@@ -15,8 +15,6 @@ cv:
         infrastructure across bare-metal Kubernetes and AWS EKS. Focused on
         container orchestration, infrastructure-as-code, CI/CD, secrets
         management, and observability.
-      - Applies the same production-grade tooling in a self-hosted Kubernetes
-        homelab used at work.
 
     experience:
       - company: Sangoma
