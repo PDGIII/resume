@@ -1,0 +1,197 @@
+cv:
+  name: Philip Greco, III
+  location: Tampa, FL
+  email: philip.d.greco@gmail.com
+  website: https://philipgreco.com
+  social_networks:
+    - network: LinkedIn
+      username: philip-greco
+    - network: GitHub
+      username: PDGIII
+
+  sections:
+    summary:
+      - Senior DevOps Engineer with 10+ years in production infrastructure,
+        including 5+ years designing, automating, and operating large-scale
+        UCaaS platforms across bare-metal Kubernetes and AWS EKS. Drives
+        GitOps-style declarative delivery, infrastructure-as-code, secrets
+        management, and observability, with a track record of leading
+        migrations on live, latency-sensitive VoIP systems serving
+        [N] customers.
+
+    experience:
+      - company: Sangoma
+        position: Sr. DevOps Engineer
+        location: Tampa, FL
+        start_date: 2025-07
+        end_date: present
+        highlights:
+          - Own reliability and delivery for a production UCaaS platform spanning
+            [N] bare-metal Kubernetes and AWS EKS clusters ([N] nodes), supporting
+            VoIP services including Asterisk, SIP, RTP proxy, and presence for
+            [N] customers.
+          - Led migration of all manually-managed workloads to a GitOps-style
+            Helm/Helmfile workflow, authoring [N] custom charts and a context
+            guard that eliminated accidental cross-cluster deployments, cutting
+            deploy time from [X] to [Y].
+          - Led zero-downtime CNI migration to Calico via the Tigera Operator
+            across production clusters; managed Multus and Whereabouts for
+            multi-network VoIP pods.
+          - Deployed Istio service mesh across clusters, configuring
+            PodDisruptionBudgets, traffic policies, and autoscaling to sustain
+            [uptime %] availability during rollouts.
+          - Provisioned AWS EKS clusters with Terraform and Terragrunt, including
+            EFS storage migration, AWS Load Balancer Controller, pod identity for
+            IAM, and VPC security groups, reducing [cost/provisioning time] by [X].
+          - Drove adoption of HashiCorp Vault on AWS with External Secrets
+            Operator across all environments, migrating [N] secrets and
+            eliminating hardcoded credentials from Git.
+          - Built the platform observability stack on EKS with Prometheus,
+            Grafana, Loki, and Alloy using daemonset and sidecar logging
+            patterns, reducing mean time to detection from [X] to [Y].
+          - Automated Kubernetes upgrades across [N] clusters through v1.33 via
+            Ansible playbooks with pod health checks, DNS validation, and
+            controlled rolling upgrades, with zero customer-facing downtime.
+          - "[CI/CD at Sangoma: describe the pipeline work you own — tooling,
+            what it builds/deploys, and what improved.]"
+          - Serve in the on-call rotation, leading incident response and root
+            cause analysis for production escalations and authoring runbooks
+            adopted by the team.
+
+      - company: Sangoma
+        position: DevOps Engineer
+        location: Atlanta, GA
+        start_date: 2021-01
+        end_date: 2025-07
+        highlights:
+          - Provisioned [N] bare-metal Dell blade servers via PXE boot with
+            Debian preseed automation, handling network configuration and OS
+            deployment end to end.
+          - Authored Ansible roles to compile and deploy FreeSWITCH from source
+            across the fleet, managing version pinning, Sofia-SIP patches, and
+            debug symbol builds.
+          - Managed fleets of [N] SIP and global load balancers via Ansible,
+            maintaining version consistency and [uptime %] availability in
+            production.
+          - Performed root cause analysis on production issues escalated by
+            Tier 3 Support, resolving [N] escalations and feeding fixes back
+            into automation.
+          - Built internal Bash and SQL diagnostic tooling adopted across the
+            support organization, reducing mean time to resolution by [X].
+
+      - company: Star2Star Communications
+        position: Lead Tier 3 Technician
+        location: Atlanta, GA
+        start_date: 2016-01
+        end_date: 2021-01
+        highlights:
+          - Diagnosed and resolved complex SIP/VoIP issues using Wireshark packet
+            analysis, filing detailed bug reports with captures and reproduction
+            steps.
+          - Correlated customer logs and packet captures to identify
+            platform-wide SIP issues, escalating to development and DevOps teams.
+          - Authored technical documentation and Standard Operating Procedures
+            adopted across the support organization.
+          - Mentored [N] junior technicians on SIP troubleshooting and
+            diagnostic tooling.
+
+    certifications:
+      - label: "[Certification name, e.g. CKA / AWS DevOps Engineer Professional]"
+        details: "[Issued YYYY or In progress, expected YYYY]"
+
+    projects:
+      - name: Self-Hosted Kubernetes Homelab
+        highlights:
+          - Designed and operate a bare-metal Kubernetes cluster managed entirely
+            through GitOps with Helmfile — declarative, dependency-ordered
+            releases with Git as the single source of truth.
+          - Integrated HashiCorp Vault with External Secrets Operator via
+            Kubernetes auth for dynamic secret injection without storing
+            credentials in Git.
+          - Deployed the Tailscale operator with custom ingress for zero-config
+            HTTPS access to internal services without exposing public ports.
+          - Built an observability stack with Prometheus, Grafana, Loki, Alloy,
+            and Alertmanager for metrics, logs, and alerting with SLO-based
+            alert routing.
+          - Provisioned Longhorn distributed block storage for stateful
+            workloads and MetalLB for bare-metal load balancing.
+          - Automated CI/CD with GitHub Actions and self-hosted ARC runner scale
+            sets, publishing images to GHCR and deploying via Helm.
+
+      - name: Self-Hosted LLM Inference & AI Automation
+        highlights:
+          - Self-hosted Ollama on Kubernetes for fully local LLM inference,
+            keeping all data on-premises with no external AI APIs.
+          - Built a Python RAG pipeline using ChromaDB and Ollama-generated
+            embeddings for semantic search over historical articles, injecting
+            context into prompts.
+          - Deployed as a Kubernetes CronJob with scheduling jitter, concurrency
+            controls, and credentials pulled from Vault via External Secrets
+            Operator.
+
+    education:
+      - institution: Southern New Hampshire University
+        area: Information Technology
+        degree: BS
+        location: Manchester, NH
+        start_date: 2013-01
+        end_date: 2017-01
+        highlights:
+          - "Concentration: Networking & Telecommunications"
+
+      - institution: NHTI, Concord's Community College
+        area: Information Technology
+        degree: AS
+        location: Concord, NH
+        start_date: 2011-01
+        end_date: 2013-01
+
+    skills:
+      - label: Container & Orchestration
+        details: Kubernetes, Docker, EKS, Helm, Helmfile
+      - label: Infrastructure as Code & GitOps
+        details: Terraform, Terragrunt, Ansible, Helmfile, declarative
+          Git-driven delivery
+      - label: CI/CD
+        details: GitHub Actions, Actions Runner Controller (ARC), GHCR
+      - label: Secrets & Security
+        details: HashiCorp Vault, External Secrets Operator, Kubernetes RBAC,
+          Tailscale
+      - label: Observability & Reliability
+        details: Prometheus, Grafana, Loki, Alloy, Alertmanager, incident
+          response, root cause analysis
+      - label: Networking & Ingress
+        details: Istio, Traefik, MetalLB, NGINX, Wireguard, VoIP/SIP, TCP/IP, DNS
+      - label: Storage
+        details: Longhorn, AWS EFS, S3
+      - label: Cloud & OS
+        details: AWS, Digital Ocean, Linux (Ubuntu, Debian)
+      - label: Languages
+        details: Python, Bash, SQL
+      - label: AI & LLM
+        details: Ollama, ChromaDB, RAG pipelines
+
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 0.7in
+    bottom_margin: 0.7in
+    left_margin: 0.7in
+    right_margin: 0.7in
+    show_footer: true
+  colors:
+    body: rgb(0, 0, 0)
+    name: rgb(75, 0, 130)
+    headline: rgb(75, 0, 130)
+    connections: rgb(75, 0, 130)
+    links: rgb(75, 0, 130)
+    section_titles: rgb(75, 0, 130)
+    footer: rgb(128, 128, 128)
+  typography:
+    line_spacing: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+
+locale:
+  language: english
