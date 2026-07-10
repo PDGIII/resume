@@ -47,7 +47,7 @@ cv:
           - Built the platform observability stack on EKS with Prometheus,
             Grafana, Loki, and Alloy using daemonset and sidecar logging
             patterns, reducing mean time to detection.
-          - Automated Kubernetes upgrades across all clusters through v1.33 via
+          - Automated Kubernetes upgrades across all clusters through v1.35 via
             Ansible playbooks with pod health checks, DNS validation, and
             controlled rolling upgrades, with zero customer-facing downtime.
           - Serve in the on-call rotation, leading incident response and root
